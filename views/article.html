@@ -1,0 +1,25 @@
+this is
+<%=title%>
+<table border="20">
+    <% for(var i=0; i < articles.length; i++) { %>
+       <tr>
+         <td><%= articles[i].id %></td>
+         <td><%= articles[i].title %></td>
+         <td><%= articles[i].author %></td>
+         <td><%= articles[i].body %></td>
+       </tr>
+    <% } %>
+    </table>
+
+    <form method="POST" action="/article">
+        Title:
+        <input type="text" name="title">
+        <br>
+        Author:
+        <input type="text" name="author">
+        <br>
+        Body:
+        <input type="text" name="body">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
